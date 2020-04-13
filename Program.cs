@@ -40,12 +40,9 @@ namespace Composition1
                 double valuePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 Console.Write("Durations (hours): ");
                 int hours = int.Parse(Console.ReadLine());
-
-                // Instanciando Contract
-                HourContract contract = new HourContract(date, valuePerHour, hours);
-
-                // Adicionando este Contrato de trabalho ao Funcionário (Worker)
-                worker.AddContract(contract);
+                
+                HourContract contract = new HourContract(date, valuePerHour, hours); // Instanciando Contract             
+                worker.AddContract(contract); // Adicionando este Contrato de trabalho ao Funcionário (Worker)
             }
         }
     }
